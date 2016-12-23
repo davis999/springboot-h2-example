@@ -1,0 +1,26 @@
+group 'io.davis'
+version '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
+
+apply plugin: 'java'
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
+    compile('org.springframework.boot:spring-boot-starter-data-jpa:1.4.0.RELEASE')
+
+    //lombok
+    compile('org.projectlombok:lombok:1.16.12')
+
+    //h2
+    compile('com.h2database:h2:1.4.193')
+}
